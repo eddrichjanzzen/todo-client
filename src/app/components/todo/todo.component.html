@@ -1,0 +1,31 @@
+<div>
+  <div class="row justify-content-md-center">
+    <div class="col-xs-10">
+      <h1><input [(ngModel)]="todoInput" id="add-text" type="text" (keydown.enter)="onKeydown($event)" placeholder="Press enter to add"></h1>
+    </div>
+    <div class="col-xs-1">
+      <!-- clicked will call addTodo in .ts -->
+      <button (click)="addTodo()" class="btn btn-primary add-button">+</button>
+    </div>
+    <div class="col-xs-1">
+      
+    </div>
+
+
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col-xs-12">
+      <ul>
+        <!-- the on delete will have a call back for the event  -->
+        <!-- $event is a variable of the for loop, this will get the specific event -->
+        <!-- you can even get position using $index -->
+        <app-todo-item *ngFor="let todo of todos"
+        [todo]="todo"
+        (onDelete)="deleteTodo($event)">
+        </app-todo-item>
+      </ul>        
+    </div>
+  </div>
+
+
+</div>

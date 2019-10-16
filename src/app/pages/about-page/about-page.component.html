@@ -1,0 +1,61 @@
+<div> 
+  <div class="row">
+    <h1>Welcome to my todo list app!</h1>  
+    
+    <div class="offset-sm-1 col-sm-11">
+      <h3>TodoClient</h3>
+      <h5>Angular Application Client</h5>
+      <p>This is a sample application made using <a href="https://angular.io">Angular</a> for demonstaration purposes. Angular is used to consume data from an API that contains todo list items.</p>
+    </div>
+
+    <div class="offset-sm-1 col-sm-11">
+      <h3>TodoAPI</h3>
+      <h5>Basic Create, Read, Update, Delete</h5>
+       <table class="table">
+        <thead>
+          <tr>
+            <th>HTTP Method</th>
+            <th>Route</th>
+            <th>Type</th>
+            <th>Action</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GET</td>
+            <td>&lt;url&gt; /api/TodoItems</td>
+            <td>JSON List</td>
+            <td>Returns a list of all todo items in the todo list.</td>
+            
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>&lt;url&gt; /api/TodoItems/&lt;$id&gt;</td>
+            <td>JSON</td>
+            <td>Returns one todo item given the its id.</td>
+          </tr>
+          <tr>
+            <td>POST</td>
+            <td>&lt;url&gt; /api/TodoItems/&lt;$id&gt;</td>
+            <td>JSON</td>
+            <td>Creates a new todo item.</td>
+          </tr>
+          <tr>
+            <td>PUT</td>
+            <td>&lt;url&gt; /api/TodoItems/&lt;$id&gt;</td>
+            <td>JSON</td>
+            <td>Updates an existing todo item given its id.</td>
+          </tr>
+          <tr>
+            <td>DELETE</td>
+            <td>&lt;url&gt; /api/TodoItems/&lt;$id&gt;</td>
+            <td>JSON</td>
+            <td>Deletes a todo item given its id.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

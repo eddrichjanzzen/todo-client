@@ -1,0 +1,14 @@
+
+<!-- (click) call the function toggle -->
+<div [ngClass]="setClass(todo)">
+  <h2>
+    <input type="checkbox" 
+    [checked]="todo.completed"
+    (click)="toggle(todo)"/>
+      {{ todo.title }}  
+    <button class="btn btn-primary"
+    (click)="delete(todo)">
+      delete
+   </button>
+  </h2>
+</div>

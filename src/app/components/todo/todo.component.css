@@ -1,0 +1,12 @@
+.add-button {
+  height: 80%;
+  margin-left:10px;
+}
+
+#add-text{
+  border-color: grey;
+}
+
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #dddddd;
+}

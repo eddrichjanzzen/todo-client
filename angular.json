@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-sample": {
+    "TodoClient": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-sample",
+            "outputPath": "../TodoApi/wwwroot",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-sample:build"
+            "browserTarget": "TodoClient:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-sample:build:production"
+              "browserTarget": "TodoClient:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-sample:build"
+            "browserTarget": "TodoClient:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-sample:serve"
+            "devServerTarget": "TodoClient:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-sample:serve:production"
+              "devServerTarget": "TodoClient:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "angular-sample"
+  "defaultProject": "TodoClient"
 }

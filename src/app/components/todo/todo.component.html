@@ -1,17 +1,12 @@
 <div>
   <div class="row justify-content-md-center">
-    <div class="col-xs-10">
+    <div class="col-xs-6">
       <h1><input [(ngModel)]="todoInput" id="add-text" type="text" (keydown.enter)="onKeydown($event)" placeholder="Press enter to add"></h1>
     </div>
-    <div class="col-xs-1">
+    <div class="col-xs-6">
       <!-- clicked will call addTodo in .ts -->
       <button (click)="addTodo()" class="btn btn-primary add-button">+</button>
     </div>
-    <div class="col-xs-1">
-      
-    </div>
-
-
   </div>
   <div class="row justify-content-md-center">
     <div class="col-xs-12">

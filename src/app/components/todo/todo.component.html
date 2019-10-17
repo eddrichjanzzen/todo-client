@@ -15,13 +15,14 @@
       </select>
     </div>
   </div>
-  <ul class="todo-item-container">
     <!-- the on delete will have a call back for the event  -->
     <!-- $event is a variable of the for loop, this will get the specific event -->
     <!-- you can even get position using $index -->
+  <div class="todo-item-container">
     <app-todo-item *ngFor="let todo of todos"
     [todo]="todo"
     (onDelete)="deleteTodo($event)">
-    </app-todo-item>
-  </ul>        
+    </app-todo-item> 
+  </div>  
+
 </div>

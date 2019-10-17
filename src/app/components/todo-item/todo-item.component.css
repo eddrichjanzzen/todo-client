@@ -4,9 +4,13 @@
 
 .item {
   border: 2px solid #dddddd;
-  vertical-align: middle;
+  margin-bottom:4px;
 }
 
 .title {
   font-size: 28px;
+}
+
+.item-row {
+  width: calc(100% - 10px);
 }

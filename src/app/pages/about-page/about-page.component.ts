@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from 'src/app/models/Todo';
 
 @Component({
   selector: 'app-about-page',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-page.component.css']
 })
 export class AboutPageComponent implements OnInit {
-
-  constructor() { }
+  todo_obj: Todo;
+  
+  constructor() { 
+    this.todo_obj = {
+      "id": 1,
+      "title": "Finish Hand ons on",
+      "completed": true
+    }
+  }
 
   ngOnInit() {
   }

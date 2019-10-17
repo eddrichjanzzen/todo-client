@@ -2,15 +2,30 @@
   <div class="row">
     <h1>Welcome to my todo list app!</h1>  
     
-    <div class="offset-sm-1 col-sm-11">
+    <div class="col-md-12">
       <h3>TodoClient</h3>
-      <h5>Angular Application Client</h5>
-      <p>This is a sample application made using <a href="https://angular.io">Angular</a> for demonstaration purposes. Angular is used to consume data from an API that contains todo list items.</p>
+      <h6>Angular Application Client</h6>
+      <p>This is a sample application made using <a href="https://angular.io">Angular</a> for demonstaration purposes. Angular is used to consume data from an API that contains todo list items. <br> The application is hosted on an azure application service where the static files are ran in the server's wwwroot folder.</p>
+
+      <h6>Github Respository: <a href="https://github.com/eddrichjanzzenang/TodoClient.git">https://github.com/eddrichjanzzenang/TodoClient.git</a></h6>
+
     </div>
 
-    <div class="offset-sm-1 col-sm-11">
+    <div class="col-md-12">
+      <h3>Todo Object</h3>
+      <h5>A json representation of a todo item</h5>
+      <code>
+        <pre>{{todo_obj |json}}</pre>
+      </code>
+    </div>
+
+    <div class="col-md-12">
       <h3>TodoAPI</h3>
-      <h5>Basic Create, Read, Update, Delete</h5>
+      <h6>Basic Create, Read, Update, Delete</h6>
+
+      <p>Outlined below is a table showing all possible endpoints for this simple todo list API</p>
+      
+       <h6>Github Respository: <a href="https://github.com/eddrichjanzzenang/TodoAPI.git">https://github.com/eddrichjanzzenang/TodoAPI.git</a></h6>
        <table class="table">
         <thead>
           <tr>
@@ -24,32 +39,39 @@
         <tbody>
           <tr>
             <td>GET</td>
-            <td>&lt;url&gt; /api/TodoItems</td>
+            <td>&lt;url&gt;/api/TodoItems</td>
             <td>JSON List</td>
             <td>Returns a list of all todo items in the todo list.</td>
             
           </tr>
           <tr>
             <td>GET</td>
-            <td>&lt;url&gt; /api/TodoItems/&lt;$id&gt;</td>
+            <td>&lt;url&gt;/api/TodoItems/filter?completed=true | false</td>
+            <td>JSON List</td>
+            <td>Returns completed items in the todo list.</td>
+            
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>&lt;url&gt;/api/TodoItems/&lt;$id&gt;</td>
             <td>JSON</td>
             <td>Returns one todo item given the its id.</td>
           </tr>
           <tr>
             <td>POST</td>
-            <td>&lt;url&gt; /api/TodoItems/&lt;$id&gt;</td>
+            <td>&lt;url&gt;/api/TodoItems/&lt;$id&gt;</td>
             <td>JSON</td>
             <td>Creates a new todo item.</td>
           </tr>
           <tr>
             <td>PUT</td>
-            <td>&lt;url&gt; /api/TodoItems/&lt;$id&gt;</td>
+            <td>&lt;url&gt;/api/TodoItems/&lt;$id&gt;</td>
             <td>JSON</td>
             <td>Updates an existing todo item given its id.</td>
           </tr>
           <tr>
             <td>DELETE</td>
-            <td>&lt;url&gt; /api/TodoItems/&lt;$id&gt;</td>
+            <td>&lt;url&gt;/api/TodoItems/&lt;$id&gt;</td>
             <td>JSON</td>
             <td>Deletes a todo item given its id.</td>
           </tr>

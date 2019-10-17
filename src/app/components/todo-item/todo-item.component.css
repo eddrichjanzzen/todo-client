@@ -1,3 +1,12 @@
 .is-completed{
   text-decoration: line-through;
 }
+
+.item {
+  border: 2px solid #dddddd;
+  vertical-align: middle;
+}
+
+.title {
+  font-size: 28px;
+}

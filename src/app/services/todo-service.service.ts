@@ -46,6 +46,12 @@ export class TodoService {
   }
 
 
+  filterTodo(completed: string): Observable<Todo[]>{
+    
+    return this.http.get<Todo[]>(environment.apiUrl + '/filter?completed=' + completed);
+
+  }
+
 
 
   // @todo

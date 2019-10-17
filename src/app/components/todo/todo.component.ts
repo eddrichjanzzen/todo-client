@@ -12,7 +12,7 @@ export class TodoComponent implements OnInit {
   
   // define the todo object
   todos: Todo[];
-
+  selectedFilter: string;
   todoInput: string;
   
   constructor(private TodoService: TodoService) { }
@@ -24,11 +24,39 @@ export class TodoComponent implements OnInit {
       // equate the result from r to the todo object defined above
       this.todos = r;
     });
+
+    this.selectedFilter = "all";
+
+
   }
 
   deleteTodo(todo: Todo){
     this.todos = this.todos.filter(t => t.id !== todo.id);
   }
+
+
+  onOptionsSelected(event){
+     let value = event.target.value;
+     this.selectedFilter = value;
+     console.log(value);
+
+     if(value === "all"){
+        this.TodoService.getAllTodos().subscribe(r => {
+          // equate the result from r to the todo object defined above
+          this.todos = r;
+        });
+     } else {
+
+        this.TodoService.filterTodo(value).subscribe(r => {
+          this.todos = r;
+        });
+     }
+
+
+
+  }
+
+
 
   // create an add todo method
   addTodo(){

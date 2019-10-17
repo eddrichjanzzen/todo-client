@@ -1,12 +1,14 @@
-.add-button {
-  height: 80%;
-  margin-left:10px;
-}
-
-#add-text{
-  border-color: grey;
-}
 
 input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #dddddd;
+}
+
+.main-todo {
+  border: 2px solid #dddddd;
+  padding-top:20px;
+  margin-top:20px;
+}
+
+.todo-item-container {
+  overflow: auto;
 }

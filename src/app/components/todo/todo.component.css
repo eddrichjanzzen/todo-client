@@ -7,8 +7,12 @@ input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   border: 2px solid #dddddd;
   padding-top:20px;
   margin-top:20px;
+  height:450px;
 }
 
 .todo-item-container {
+  border: 2px solid #dddddd;
+  padding:10px 0px 10px;
+  height:350px;
   overflow: auto;
 }
